@@ -1,7 +1,7 @@
 // LinkedIn AI Slop Detector Content Script
 
 // IMPORTANT: We will replace this URL once the Modal training finishes and we deploy the API endpoint.
-const LAYA_API_URL = "https://amaanprogramming--laya-slop-api-fastapi-app.modal.run/predict";
+const LAYA_API_URL = "https://<YOUR_MODAL_USERNAME>--laya-slop-api-fastapi-app.modal.run/predict";
 
 // Keep track of processed posts to avoid duplicate API calls
 const processedPosts = new WeakSet();
