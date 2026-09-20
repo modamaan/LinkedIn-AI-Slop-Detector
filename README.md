@@ -1,5 +1,10 @@
 # LinkedIn AI Slop Detector 🚀
 
+
+https://github.com/user-attachments/assets/09f283dc-3e3c-4a85-800b-ecb2d314a537
+
+
+
 A lightning-fast Google Chrome extension that instantly detects and highlights AI-generated "Slop" (Hustle Culture, Marketing Shills, etc.) in your LinkedIn feed as you scroll.
 
 Built using an ensemble of a **Fine-Tuned Laya Model** (System 1 Decision Engine) and robust DOM structural parsing.
