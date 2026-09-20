@@ -1,0 +1,90 @@
+/* Slop Detector Badge Styles */
+.slop-badge {
+    display: inline-flex;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid rgba(0,0,0,0.05);
+    background: #fff;
+    transition: all 0.2s ease;
+    cursor: help;
+}
+
+/* Ensure the post container can absolutely position the badge */
+.feed-shared-update-v2 {
+    position: relative;
+}
+
+/* Color states */
+.slop-badge.status-human {
+    color: #0c7b33;
+    background: #eef8f1;
+    border-color: #bce0c8;
+}
+
+.slop-badge.status-mixed {
+    color: #9d7c08;
+    background: #fdf5d3;
+    border-color: #f2e29f;
+}
+
+.slop-badge.status-slop {
+    color: #c9252d;
+    background: #fae6e6;
+    border-color: #f2b8b8;
+}
+
+.slop-badge.status-loading {
+    color: #666;
+    background: #f3f2ef;
+    border-color: #e0dfdc;
+}
+
+.slop-badge-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.status-human .slop-badge-dot { background: #0c7b33; }
+.status-mixed .slop-badge-dot { background: #e5a000; }
+.status-slop .slop-badge-dot { background: #c9252d; }
+.status-loading .slop-badge-dot { 
+    background: #8f8f8f; 
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+/* Tooltip on hover */
+.slop-badge::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -32px;
+    right: 0;
+    background: #333;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.slop-badge:hover::after {
+    opacity: 1;
+}

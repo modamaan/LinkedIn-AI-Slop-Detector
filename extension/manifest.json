@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn AI Slop Detector",
+  "version": "1.0",
+  "description": "Detects AI-generated slop on LinkedIn and badges posts as Human or AI.",
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.linkedin.com/feed/*",
+        "https://www.linkedin.com/in/*"
+      ],
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": [
+    "https://*.modal.run/*"
+  ]
+}
